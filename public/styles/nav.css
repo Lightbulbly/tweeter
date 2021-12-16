@@ -1,8 +1,10 @@
 nav {
-  position:absolute;
+  /* position:absolute; */
+  position:fixed;
+  /* top:0; */
+  width: 100%;
 display: flex;
   height: 120px;
-width: 100%;
 background-color: #4056A1;
 font-family: 'Bungee', sans-serif;
 color: #FFFFFF;
@@ -55,7 +57,7 @@ align-items: center;
 
 }
 
-header {
+.nav-header {
   height: 500px;
   width: 100%;
   background-image: url("../images/header-bg-45-degree-fabric-light.png")

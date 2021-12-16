@@ -1,0 +1,103 @@
+/* .all-tweets { */
+  #tweets-container {
+  background: whitesmoke;
+  border: 3px solid #000000;
+  margin: 20px;
+  padding: 15px
+  font-family: 'Source Sans Pro', sans-serif; 
+}
+/* .all-tweets:hover { */
+  #tweets-container:hover{
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.all-tweets-header {
+  display:flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 5px
+}
+/* no camel case .userAvatarAndUsername { */
+.user-avatar-and-username {
+  display:flex;
+  flex-direction: row;
+  /* justify-content: flex-start; */
+  justify-content: center;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-size: 2em;
+}
+
+.user-avatar-and-username img {
+  display: flex;
+
+  width:80px;  
+  height:80px;
+  margin:15px;
+}
+
+.avatar {
+  display: flex;
+
+}
+.username{
+  display: flex;
+/* justify-content: center; */
+}
+.tweeterHandle {
+  display: flex;
+  justify-content: flex-end;
+  margin: 50px;
+  font-size: 1.5em;
+}
+
+#tweets-container article p {
+padding: 20px
+}
+
+#tweets-container article footer {
+  color:black;
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-size: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px
+} 
+.tweet-text{
+  border-bottom: 2px solid black;
+  font-family: 'Source Sans Pro', sans-serif; 
+
+  font-size: 2em;
+
+}
+.date-posted{
+  font-size: 2em;
+margin: 15px
+}
+.flag-retweet-like-icons {
+display:flex;
+background: whitesmoke;
+font-size: 1.5em;
+}
+#flag-tweet{
+  margin: 15px
+}
+#flag-tweet:hover
+{
+color:blue;
+ }
+ #retweet-tweet{
+  margin: 15px
+}
+#retweet-tweet:hover
+{
+color:blue;
+ }
+ #like-tweet{
+  margin: 15px
+}
+#like-tweet:hover
+{
+color:blue;
+ }
