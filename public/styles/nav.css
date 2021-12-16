@@ -1,0 +1,74 @@
+nav {
+  position:absolute;
+display: flex;
+  height: 120px;
+width: 100%;
+background-color: #4056A1;
+font-family: 'Bungee', sans-serif;
+color: #FFFFFF;
+/* 1.5ems of space on the right and left between the content and the edges */
+padding: 1.5em;
+
+}
+ 
+.div1And2and3 { 
+  display: flex;
+  width: 100%;
+  align-content: center;
+ 
+
+}
+.div1{
+  width: 80%;
+ 
+} 
+
+.div2and3 {
+  /* align-content:center; */
+
+
+}
+.div2 { 
+  display: flex;
+  justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;  
+}
+.div2 strong {
+  margin-right: 5px;
+}
+
+.div3{
+  display: flex;
+  justify-content: center;
+   color: red;
+} 
+
+.containerOfAvatarAndName {
+
+  display: flex;
+  background-color:#e7873885;
+  width: 100%;
+justify-content: center;
+flex-direction: column;
+padding-top: 150px;
+align-items: center;
+
+}
+
+header {
+  height: 500px;
+  width: 100%;
+  background-image: url("../images/header-bg-45-degree-fabric-light.png")
+  background-size: cover;
+
+}
+/* .anAvatar{
+  display: flex;
+ 
+}*/
+.aName{
+  display: flex;
+  margin-top: -50px;
+  font-family: 'Source Sans Pro', sans-serif;
+color: white;
+} 
