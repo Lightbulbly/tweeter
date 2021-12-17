@@ -109,11 +109,15 @@ $(document).ready(function() {
     event.preventDefault();
     // console.log("here!",$("#tweet-text").val());
     if ($("#tweet-text").val().length === 0) {
-      alert("tweet cannot be empty");
+      // alert("tweet cannot be empty");
+      $('#err-message-text-limit').hide();
+      $('#err-message-empty-tweet').show();
       return;
     }
     if ($("#tweet-text").val().length > 140) {
-      alert("tweet exceeds 140 characters");
+      // alert("tweet exceeds 140 characters");
+      $('#err-message-empty-tweet').hide();
+      $('#err-message-text-limit').show();
       return;
     }
     console.log("post-new-tweet", $("#post-new-tweet"));

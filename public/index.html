@@ -69,6 +69,9 @@ font-family: 'Source Sans Pro', sans-serif;
     <main class="container">
       
       <section class="new-tweet">
+        
+        <div id='err-message-empty-tweet' style='display:none'> Tweet cannot be empty</div> 
+        <div id='err-message-text-limit' style='display:none'> Tweet cannot exceed 140 characters</div> 
         <!-- <h2>Compose Tweet</h2> -->
         <!-- example from tinyapp <form id="login" method="POST" action="/login"> -->
         <form id="post-new-tweet" method="POST" action="/tweets/" >
