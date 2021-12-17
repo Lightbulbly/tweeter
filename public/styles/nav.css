@@ -1,33 +1,29 @@
 nav {
-  /* position:absolute; */
   position:fixed;
   top:0;
   width: 100%;
-display: flex;
+  display: flex;
   height: 120px;
-background-color: #4056A1;
-font-family: 'Bungee', sans-serif;
-color: #FFFFFF;
-/* 1.5ems of space on the right and left between the content and the edges */
-padding: 1.5em;
+  background-color: #4056A1;
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF;
+  padding: 1.5em;
 
 }
  
-.div1And2and3 { 
+.logo-write-tweet-icon { 
   display: flex;
   width: 100%;
   align-content: center;
- 
-
+  font-size: 1.8em;
+  padding: 7px;
 }
-.div1{
+
+.logo {
   width: 80%;
- 
 } 
 
-
-.div2and3 {
-  /* align-content:center; */
+.write-tweet-icon {
 	background: none;
 	color: inherit;
 	border: none;
@@ -37,71 +33,54 @@ padding: 1.5em;
 	outline: inherit;
 }
 
-.div2 { 
+.write-tweet { 
   display: flex;
   justify-content: center;
   font-family: 'Source Sans Pro', sans-serif;  
 }
-.div2 strong {
+
+.write-tweet strong {
   margin-right: 5px;
 }
 
-.div3{
+.icon-dual-arrow {
   display: flex;
   justify-content: center;
-   color: red;
+  color: red;
 } 
 
 .containerOfAvatarAndName {
-
   display: flex;
   background-color:#e7873885;
   width: 100%;
-justify-content: center;
-flex-direction: column;
-padding-top: 150px;
-align-items: center;
-
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 150px;
+  align-items: center;
+  background-image: url("../images/header-bg-45-degree-fabric-light.png");
+  background-size: cover;
 }
 
 .nav-header {
   height: 500px;
   width: 100%;
-  background-image: url("../images/header-bg-45-degree-fabric-light.png")
-  background-size: cover;
-
-}
-/* .anAvatar{
-  display: flex;
  
-}*/
+}
+
 .aName{
   display: flex;
   margin-top: -25px;
   font-family: 'Source Sans Pro', sans-serif;
-color: white;
+  color: white;
  } 
 
-
-
-
-
- 
-
 @media only screen and (min-width: 1024px) {
-
-  
- 
   .containerOfAvatarAndName {
     display:flex;
     flex-direction: column;
-     width:50%;
-     padding-bottom: 10%;
-     margin:auto
-    /* justify-self: center;   */
-    
+    width:50%;
+    padding-bottom: 10%;
+    margin:auto;
+   
   }
-
-  
-
 }
