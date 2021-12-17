@@ -21,7 +21,12 @@ const $formSubmission = $("#tweet-text").on("input",function(event) {
   // console.log("this.parent:", $(this).parent().children().children().next());
   // console.log("this.parent.value:",$(this).parent);
   // $(this).parent().children().children().next().replaceWith(`${140 - event.target.value.length}`);
-  $(this).parent().children().children().next().html(`${140 - tweetLength}`);
+  if (140 - tweetLength >= 0) {
+    $(this).parent().children().children().next().html(`${140 - tweetLength}`);
+  } else {
+    $(this).parent().children().children().next().html(`<div style="color:red;">${140 - tweetLength}</div>`);
+  }
+
 });
 
 // const $formSubmission = $("#tweet-text").on("blur", function(event) {
