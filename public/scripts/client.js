@@ -81,6 +81,7 @@ $(document).ready(function() {
   // $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
  
   const renderTweets = (tweets)=>{
+    $('#tweets-container').html(``);//empty container and loop again
     // console.log("tweets:",tweets);
     for (const tweet of tweets) {
       // console.log("tweet:",tweet);
@@ -98,7 +99,9 @@ $(document).ready(function() {
       success: function(response) {
         // console.log("success!");
         // console.log("response GET /tweets:",response);
-        $('#tweets-container').html(renderTweets(response));
+        // $('#tweets-container').html(renderTweets(response));
+        renderTweets(response);
+
       }
       // window.location.reload();
 
@@ -110,26 +113,27 @@ $(document).ready(function() {
     // console.log("here!",$("#tweet-text").val());
     if ($("#tweet-text").val().length === 0) {
       // alert("tweet cannot be empty");
-      $('#err-message-text-limit').hide();
-      $('#err-message-empty-tweet').show();
+      $('#error-message-text-limit').hide();
+      $('#error-message-empty-tweet').show();
       return;
     }
     if ($("#tweet-text").val().length > 140) {
       // alert("tweet exceeds 140 characters");
-      $('#err-message-empty-tweet').hide();
-      $('#err-message-text-limit').show();
+      $('#error-message-empty-tweet').hide();
+      $('#error-message-text-limit').show();
       return;
     }
     console.log("post-new-tweet", $("#post-new-tweet"));
     $.ajax({
-      type: "POST",
-      url: "/tweets/",
+      // type: "POST",
+      method:"POST",
+      url: "/tweets",
       data: $("#post-new-tweet").serialize(),
-      dataType: "json",
-      encode: true,
-    }).done(function(data) {
-      console.log("data:",data);
-      // loadtweets();
+      // dataType: "json",//this is what was causing the problem
+      // encode: true,
+    }).done(function() {
+      // console.log("data:",data);
+      loadtweets();
     });
 
 

@@ -21,7 +21,7 @@ font-family: 'Source Sans Pro', sans-serif;
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/all-tweets.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/error-message.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -70,8 +70,8 @@ font-family: 'Source Sans Pro', sans-serif;
       
       <section class="new-tweet">
         
-        <div id='err-message-empty-tweet' style='display:none'> Tweet cannot be empty</div> 
-        <div id='err-message-text-limit' style='display:none'> Tweet cannot exceed 140 characters</div> 
+        <div class="error-message" id='error-message-empty-tweet' style='display:none'> Tweet cannot be empty</div> 
+        <div class="error-message" id='error-message-text-limit' style='display:none'> Tweet cannot exceed 140 characters</div> 
         <!-- <h2>Compose Tweet</h2> -->
         <!-- example from tinyapp <form id="login" method="POST" action="/login"> -->
         <form id="post-new-tweet" method="POST" action="/tweets/" >
