@@ -67,12 +67,64 @@ $(document).ready(function() {
   const $tweet = createTweetElement(tweetData);
 
   // Test / driver code (temporary)
-  console.log($tweet); // to see what it looks like
+  // console.log("here is", $tweet); // to see what it looks like
   $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+ 
+  const renderTweets = (tweets)=>{
+    for (const tweet of tweets) {
+      const newTweet = createTweetElement(tweet);
+      $('#tweets-container').prepend(newTweet);
+    }
+  };
 
-  
+  const loadtweets = function() {
+    $.ajax({
+      type: 'GET',
+      url: "/tweets/",
+      // contentType: false,
+      // processData:false,//this is a must
+      success: function(response) {
+        // console.log("success!");
+        $('#tweets-container').html(renderTweets(response));
+      }
+      // window.location.reload();
+
+    });
+  };
+
+
+
+  $("#post-new-tweet").submit(function(event) {
+    event.preventDefault();
+    // console.log("here!",$("#tweet-text").val());
+    if ($("#tweet-text").val().length === 0) {
+      alert("tweet cannot be empty");
+      return;
+    }
+    if ($("#tweet-text").val().length > 140) {
+      alert("tweet exceeds 140 characters");
+      return;
+    }
+   
+    $.ajax({
+      type: "POST",
+      url: "/tweets/",
+      data: $("#post-new-tweet").serialize(),
+      dataType: "json",
+      encode: true,
+    }).done(function(data) {
+      console.log("data:",data);
+      // loadtweets();
+    });
+
+
+  });
+
+
+  loadtweets();
+
+
 });
 
 
- 
  
