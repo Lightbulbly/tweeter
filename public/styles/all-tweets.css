@@ -1,6 +1,6 @@
 /* .all-tweets { */
   #tweets-container {
-  background: whitesmoke;
+  background: #f4f1ec;
   border: 3px solid #000000;
   margin: 20px;
   padding: 15px;
@@ -81,7 +81,7 @@ margin: 15px
 }
 .flag-retweet-like-icons {
 display:flex;
-background: whitesmoke;
+background: #f4f1ec;
 font-size: 1.5em;
 }
 #flag-tweet{
@@ -105,3 +105,19 @@ color:blue;
 {
 color:blue;
  }
+
+ @media only screen and (min-width: 1024px) {
+ 
+  #tweets-container {
+    display: flex;
+    width:100%;
+    justify-content: center;
+    flex-direction: column;
+    background: #f4f1ec;
+    border: 3px solid #000000;
+    /* margin: 20px; */
+    padding: 15px;
+    font-family: 'Source Sans Pro', sans-serif; 
+  }
+
+}
